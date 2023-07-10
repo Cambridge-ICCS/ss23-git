@@ -35,6 +35,10 @@ class Calculator:
                 self.theStack.push(
                     self.theStack.pop() / self.theStack.pop()
                 )
+            case "%":
+                self.theStack.push(
+                    self.theStack.pop() % self.theStack.pop()
+                )
             case "p":
                 token = self.theStack.pop()
                 print(token)
