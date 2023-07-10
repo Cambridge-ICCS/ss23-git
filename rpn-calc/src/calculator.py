@@ -37,7 +37,7 @@ class Calculator:
                 )
             case "%":
                 self.the_stack.push(
-                    self.the_stack.pop() / self.the_stack.pop()
+                    self.the_stack.pop() % self.the_stack.pop()
                 )
             case "p":
                 token = self.the_stack.pop()
