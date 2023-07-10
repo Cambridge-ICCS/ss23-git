@@ -6,7 +6,7 @@ without brackets. This makes it especially simple to implement an RPN calculator
 first out data structure).
 
 ## Usage
-From the `src/rpn_calc` directory:
+From the `rpn-calc/src` directory:
 
 ```
 python rpn_calc.py
@@ -38,7 +38,7 @@ The input string `1 2 +` processed as follows:
 Here's an example shell session:
 
 ```
-$ cd src/rpn_calc
+$ cd rpn-calc/src
 $ python rpn_calc.py << EOM
 1 2 +
 EOM
@@ -52,6 +52,6 @@ cd ss23-git
 python -m venv venv
 source venv/bin/activate
 pip install pytest
-cd src/rpn_calc
+cd rpn-calc/src
 pytest
 ```
