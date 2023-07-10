@@ -16,7 +16,7 @@ class Calculator:
         push the operand result.
         "p" or "" (empty string) pop and print the top-most self.theStack
         element.
-        Anything else is assumed to be a float, and is pushed.
+        Anything else is assumed to be an integer, and is pushed.
         '''
         match token:
             case "+":
@@ -32,12 +32,13 @@ class Calculator:
                     self.theStack.pop() * self.theStack.pop()
                 )
             case "/":
+                # integer (floor) division
                 self.theStack.push(
-                    self.theStack.pop() / self.theStack.pop()
+                    self.theStack.pop() // self.theStack.pop()
                 )
             case "p":
                 token = self.theStack.pop()
                 print(token)
                 return token
             case _:
-                self.theStack.push(float(token))
+                self.theStack.push(integer(token))
