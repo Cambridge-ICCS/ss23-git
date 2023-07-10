@@ -10,6 +10,9 @@ from calculator import Calculator
 if TYPE_CHECKING:
     from collections.abc import Iterable
 
+MIN_PYTHON = (3, 10)
+if sys.version_info < MIN_PYTHON:
+    sys.exit("Python %s.%s or later is required.\n" % MIN_PYTHON)
 
 def main(commands: "Iterable" = sys.stdin):
     '''
