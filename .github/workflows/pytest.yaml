@@ -1,0 +1,37 @@
+# This is a GitHub Actions workflow file which instructs GitHub what commands to
+# run on a "fresh" machine (a cloud-provisioned worker) and when (e.g. when a
+# branch is updated).
+
+name: pytest
+
+on:
+  # execute this workflow on every push to main
+  push:
+    branches:
+    - main
+  # also execute this workflow on every push to any PR, and when you open one
+  pull_request:
+    types:
+    - synchronize
+    - opened
+    - reopened
+
+jobs:
+  linux-test:
+    name: Ubuntu / test
+    runs-on: ubuntu-latest
+
+    # run the following steps in order
+    # if any step fails, the workflow halts and fails
+    steps:
+    - name: Checkout Git repo and change directory
+      uses: actions/checkout@v3
+
+    - name: Install Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.11
+
+    - run: pip install pytest
+
+    - run: pytest .
