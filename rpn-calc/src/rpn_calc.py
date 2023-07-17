@@ -31,7 +31,8 @@ def parse_tokens(calculator: Calculator, tokens: List[Any]):
     FIXME: Could this be in Calculator?
     '''
     for token in tokens:
-        calculator.parse(token.rstrip())
+        if token:
+            calculator.parse(token.rstrip())
 
 
 if __name__ == '__main__':
