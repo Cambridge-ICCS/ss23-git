@@ -55,3 +55,5 @@ pip install pytest
 cd rpn-calc/src
 pytest
 ```
+
+The minimum required version of Python is 3.10.
