@@ -41,3 +41,8 @@ class Calculator:
                 return token
             case _:
                 self.theStack.push(float(token))
+
+            case _:
+                print "WAHT!?"
+
+class SomethingElse:
