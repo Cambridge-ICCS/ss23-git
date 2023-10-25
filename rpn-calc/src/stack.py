@@ -27,3 +27,5 @@ class Stack:
         Pop an item off the stack.
         '''
         return self.the_stack.pop()
+
+class NewStructure:

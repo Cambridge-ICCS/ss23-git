@@ -48,4 +48,10 @@ class Calculator:
                 print(token)
                 return token
             case _:
+                self.theStack.push(float(token))
+
+            case _:
+                print "WAHT!?"
+
+class SomethingElse:
                 self.the_stack.push(float(token))
